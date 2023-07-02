@@ -1,0 +1,31 @@
+{
+  "name": "video-chat-app",
+  "version": "1.0.0",
+  "description": "ReactJS project of building video chat app from scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChinmayMandale/video-chat-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChinmayMandale/video-chat-app/issues"
+  },
+  "homepage": "https://github.com/ChinmayMandale/video-chat-app#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "react-copy-to-clipboard": "^5.1.0",
+    "simple-peer": "^9.11.1",
+    "socket.io": "^4.7.1",
+    "socket.io-client": "^4.7.1"
+  }
+}
