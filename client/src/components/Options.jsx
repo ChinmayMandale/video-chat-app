@@ -18,7 +18,6 @@ const Options = ({children}) => {
                         <Grid item xs={12} md={6}>
                             <Typography gutterBottom variant='h6'>Account Info</Typography>
                             <TextField label='Name' value={name} onChange={(e) => setName(e.target.value)} fullWidth />
-                            {console.log(me)}
                             <CopyToClipboard text={me} >
                                 <Button variant='contained' color='primary' fullWidth >
                                     Copy Your ID
