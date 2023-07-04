@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { Typography, Grid, Paper, Box } from '@mui/material';
+import { Typography, Grid, Paper } from '@mui/material';
 
 import { SocketContext } from '../SocketContext';
 
@@ -9,14 +9,22 @@ const VideoPlayer = () => {
 
     return (
         
-            <Grid container>
+            <Grid container sx={{
+                display: 'flex',
+                justifyContent: 'center'
+                }}>
                 {/* Our video */}
                 {
                     stream && (
-                        <Paper>
+                        <Paper sx={{
+                            p: 10, 
+                            border: 2,
+                            borderColor: 'black.500',
+                            m: 5
+                        }}>
                             <Grid item xs={12} md={6}>
                                 <Typography variant="h5" gutterBottom>{name || 'Name'}</Typography>
-                                <video playsInline muted ref={myVideo} autoPlay />
+                                <video playsInline muted ref={myVideo} autoPlay sx={{width: '35%'}}/>
                             </Grid>
                         </Paper>
                     )
@@ -24,10 +32,15 @@ const VideoPlayer = () => {
                 {/* Other user video */}
                 {
                     callAccepted && !callEnded && (
-                        <Paper>
+                        <Paper sx={{
+                            p: 10, 
+                            border: 2,
+                            borderColor: 'black.500',
+                            m: 10
+                        }}>
                             <Grid item xs={12} md={6}>
                                 <Typography variant="h5" gutterBottom>{call.name || 'Name'}</Typography>
-                                <video playsInline ref={userVideo} autoPlay />
+                                <video playsInline ref={userVideo} autoPlay sx={{width: '35%'}} />
                             </Grid>
                         </Paper>
                     )
