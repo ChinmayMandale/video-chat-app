@@ -14,6 +14,7 @@ const VideoPlayer = () => {
                 justifyContent: 'center'
                 }}>
                 {/* Our video */}
+                { console.log(myVideo) }
                 {
                     stream && (
                         <Paper sx={{
@@ -30,6 +31,7 @@ const VideoPlayer = () => {
                     )
                 }
                 {/* Other user video */}
+                { console.log(userVideo) }
                 {
                     callAccepted && !callEnded && (
                         <Paper sx={{
